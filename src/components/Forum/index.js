@@ -1,0 +1,8 @@
+export { default as ForumHeader } from './ForumHeader/ForumHeader'
+export { default as ForumPost } from './ForumPost/ForumPost'
+export { default as ForumPostComments } from './ForumPostComments/ForumPostComments'
+export { default as ForumTopic } from './ForumTopic/ForumTopic'
+export { default as ForumTopics } from './ForumTopics/ForumTopics'
+export { default as ForumTopicSection } from './ForumTopicSection/ForumTopicSection'
+export { default as NewForumCommentForm } from './NewForumCommentForm/NewForumCommentForm'
+export { default as NewForumPostForm } from './NewForumPostForm/NewForumPostForm'

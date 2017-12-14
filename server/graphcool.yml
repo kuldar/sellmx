@@ -1,0 +1,102 @@
+#########
+# Types #
+#########
+types: ./types.graphql
+
+#############
+# Functions #
+#############
+functions:
+
+  # Signup
+  signup:
+    type: resolver
+    schema: email-password/signup.graphql
+    handler:
+      code: email-password/signup.js
+
+  # New user
+  newUser:
+    type: operationBefore
+    operation: User.create
+    handler:
+      code: user/newUser.js
+
+  # Authentication
+  authenticate:
+    type: resolver
+    schema: email-password/authenticate.graphql
+    handler:
+      code: email-password/authenticate.js
+
+  # User login check
+  loggedInUser:
+    type: resolver
+    schema: email-password/loggedInUser.graphql
+    handler:
+      code: email-password/loggedInUser.js
+
+  # New forum post
+  newForumPost:
+    type: operationBefore
+    operation: ForumPost.create
+    handler:
+      code: forum/newForumPost.js
+
+  # New forum comment
+  newForumComment:
+    type: operationBefore
+    operation: ForumComment.create
+    handler:
+      code: forum/newForumComment.js
+
+###############
+# Permissions #
+###############
+permissions:
+
+  - operation: "*"
+
+  # Everyone can read products
+# - operation: Product.read
+
+#   # Everyone can read product tags
+# - operation: ProductTag.read
+
+#   # Everyone can read forum topics
+# - operation: ForumTopic.read
+
+#   # Everyone can read forum posts
+# - operation: ForumPost.read
+
+#   # Only auth users can create forum posts
+# - operation: ForumPost.create
+
+#   # Everyone can read forum comments
+# - operation: ForumComment.read
+
+#   # Everyone can read the id, name and email fields of users
+# - operation: User.read
+#   fields:
+#     - id
+#     - name
+
+#   # Only authenticated users can create relation between a user and a product
+# - operation: UserProducts.connect
+#   authenticated: true
+
+#   # Only authenticated users can create relation between a user and a forum post
+# - operation: UserForumPosts.connect
+#   authenticated: true
+
+#   # Only authenticated users can create relation between a user and a forum comment
+# - operation: UserForumComments.connect
+#   authenticated: true
+
+###############
+# Root Tokens #
+###############
+rootTokens:
+  - signup
+  - authenticate
+  - loggedInUser

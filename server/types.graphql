@@ -1,0 +1,102 @@
+type User @model {
+  name: String
+  email: String @isUnique
+  password: String
+  slug: String @isUnique
+  tags: [UserTag!]! @relation(name: "UserTags")
+  products: [Product!]! @relation(name: "UserProducts")
+  forumPosts: [ForumPost!]! @relation(name: "UserForumPosts")
+  forumComments: [ForumComment!]! @relation(name: "UserForumComments")
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type UserTag @model {
+  name: String!
+  slug: String
+  users: [User!]! @relation(name: "UserTags")
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Product @model {
+  name: String!
+  slug: String @isUnique
+  description: String!
+  price: Int!
+  downloadLink: String
+  marketing: Json
+    # hero: { title, lead, intro, image/video }
+    # links: { buy, preview1, preview2 }
+    # features: [{ video/image, title, body }]
+  documentation: Json
+    # page: { title, intro }
+    # sections: [{ title, intro, body, slug, video/image }]
+  paddleId: String
+  releasedAt: DateTime
+  changedAt: DateTime
+  version: String
+  users: [User!]! @relation(name: "UserProducts")
+  tags: [ProductTag!]! @relation(name: "ProductTags")
+  topic: ForumTopic @relation(name: "ProductForumTopic")
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ProductTag @model {
+  name: String!
+  slug: String
+  products: [Product!]! @relation(name: "ProductTags")
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ForumTopic @model {
+  name: String!
+  slug: String @isUnique
+  intro: String
+  product: Product @relation(name: "ProductForumTopic")
+  posts: [ForumPost!]! @relation(name: "ForumTopicPosts")
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ForumPost @model {
+  title: String!
+  body: String!
+  isPinned: Boolean @defaultValue(value: "false")
+  slug: String @isUnique
+  author: User! @relation(name: "UserForumPosts")
+  comments: [ForumComment!]! @relation(name: "ForumPostComments")
+  topic: ForumTopic! @relation(name: "ForumTopicPosts")
+  activeAt: DateTime
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ForumComment @model {
+  body: String!
+  shortId: String
+  author: User! @relation(name: "UserForumComments")
+  post: ForumPost! @relation(name: "ForumPostComments")
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type File @model {
+  name: String!
+  url: String! @isUnique
+  size: Int!
+  contentType: String!
+  secret: String! @isUnique
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

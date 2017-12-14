@@ -1,0 +1,16 @@
+<svg width="387" height="607" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <use xlink:href="#herobg" transform="rotate(180 193.5 303.5)" fill="url(#herobg3)"/>
+  <use xlink:href="#herobg2" transform="rotate(107.172 115.803 140.102)" fill="url(#herobg4)"/>
+  <defs>
+    <linearGradient id="herobg3" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-326 -439 326 -2977.16 163 1927.58)">
+      <stop offset="0" stop-color="#E71756"/>
+      <stop offset="1" stop-color="#E74D17"/>
+    </linearGradient>
+    <linearGradient id="herobg4" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-185.118 -239.887 185.118 -1626.84 92.559 1053.31)">
+      <stop offset="0" stop-color="#E71756"/>
+      <stop offset="1" stop-color="#E74D17"/>
+    </linearGradient>
+    <path id="herobg" d="M302.568 171.689c31.243 24.249 31.243 71.373 0 95.622L97.957 426.129C58.09 457.074 0 428.721 0 378.317V60.683C0 10.279 58.09-18.074 97.957 12.87l204.611 158.82z"/>
+    <path id="herobg2" d="M171.812 93.817c17.741 13.252 17.741 39.002 0 52.253L55.625 232.854C32.985 249.763 0 234.27 0 206.728V33.159C0 5.617 32.986-9.876 55.625 7.033l116.187 86.784z"/>
+  </defs>
+</svg>

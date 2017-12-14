@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Capture",
+    "lead": "Simple, responsive and easy to edit Hubspot theme.",
+    "intro": "Change colors and fonts easily, right from Hubspot without ever touching the code.",
+    "image": "/images/products/capture/hero-illustration.png"
+  },
+  "links": {
+    "buy": "#",
+    "preview1": "https://sllmx.co/capture-preview",
+    "preview2": "https://sllmx.co/capture-mixology-preview"
+  },
+  "features": [
+    {
+      "title": "Editing the template layout",
+      "body": "Nullam sollicitudin lobortis ante, sit amet vestibulum tortor consequat sed. Curabitur efficitur et turpis at aliquam."
+    },
+    {
+      "title": "Editing the template layout",
+      "body": "Nullam sollicitudin lobortis ante, sit amet vestibulum tortor consequat sed. Curabitur efficitur et turpis at aliquam."
+    },
+    {
+      "title": "Editing the template layout",
+      "body": "Nullam sollicitudin lobortis ante, sit amet vestibulum tortor consequat sed. Curabitur efficitur et turpis at aliquam."
+    },
+    {
+      "title": "Editing the template layout",
+      "body": "Nullam sollicitudin lobortis ante, sit amet vestibulum tortor consequat sed. Curabitur efficitur et turpis at aliquam."
+    },
+    {
+      "title": "Editing the template layout",
+      "body": "Nullam sollicitudin lobortis ante, sit amet vestibulum tortor consequat sed. Curabitur efficitur et turpis at aliquam."
+    },
+    {
+      "title": "Editing the template layout",
+      "body": "Nullam sollicitudin lobortis ante, sit amet vestibulum tortor consequat sed. Curabitur efficitur et turpis at aliquam."
+    }
+  ]
+}

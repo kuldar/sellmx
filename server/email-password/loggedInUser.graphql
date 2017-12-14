@@ -1,0 +1,11 @@
+type LoggedInUserPayload {
+  # if `id` is `null`, it means there is not logged in user
+  id: ID
+  name: String
+  email: String
+  slug: String
+}
+
+extend type Query {
+  loggedInUser: LoggedInUserPayload!
+}
